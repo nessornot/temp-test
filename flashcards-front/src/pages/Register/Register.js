@@ -30,6 +30,7 @@ export default function Register() {
             navigate('/library');
         } catch (error) {
             alert("Ошибка при регистрации или входе")
+            console.log(error)
         }
     };
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import {IPADR} from "../../services/ipname";
 
 export default function SharedSet() {
     const { id } = useParams();
@@ -9,7 +10,7 @@ export default function SharedSet() {
     const [saving, setSaving] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/shared/${id}`)
+        fetch(`http://${IPADR}/shared/${id}`)
             .then((res) => {
                 if (!res.ok) throw new Error("Набор не найден или не публичен");
                 return res.json();
@@ -23,7 +24,7 @@ export default function SharedSet() {
         setSaving(true);
         try {
             const token = localStorage.getItem('jwtToken');
-            const res = await fetch(`http://localhost:8080/shared/${id}/copy`, {
+            const res = await fetch(`http://${IPADR}/shared/${id}/copy`, {
                 method: 'POST',
                 headers: {
                     Authorization: `Bearer ${token}`,
