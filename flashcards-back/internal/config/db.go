@@ -24,6 +24,13 @@ func Init() {
 }
 
 func createTables() {
+	usersTable := `CREATE TABLE IF NOT EXISTS users (
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		name TEXT UNIQUE,
+		password_hash TEXT,
+		created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+	);`
+
 	deckTable := `
 	CREATE TABLE IF NOT EXISTS decks (
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -41,7 +48,12 @@ func createTables() {
 		answer TEXT
 	);`
 
-	_, err := DB.Exec(deckTable)
+	_, err := DB.Exec(usersTable)
+	if err != nil {
+		log.Fatalf("Error while creating users table: %v", err)
+	}
+
+	_, err = DB.Exec(deckTable)
 	if err != nil {
 		log.Fatalf("Error while creating decks table: %v", err)
 	}
