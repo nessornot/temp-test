@@ -1,0 +1,45 @@
+@use '../../styles/main' as vars;
+
+.sidebar{
+  //background-color: #ffceea;
+  width: 18rem;
+  margin-right: 1rem;
+}
+
+.sidebar__nav{
+
+}
+
+.sidebar__list{
+
+}
+
+.sidebar__item{
+  width: 16rem;
+  height: 2.7rem;
+
+
+  //border: black 1px solid;
+  border-radius: 0.6rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 1rem;
+
+  img{
+    margin: 0 1.7rem 0 1.1rem;
+  }
+}
+
+.sidebar__item:hover{
+  background-color: #EEF0FF;
+}
+
+.sidebar__link{
+  color: vars.$mainBlack;
+  font-size: 1rem;
+  font-weight: 700;
+}

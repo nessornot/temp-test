@@ -1,0 +1,108 @@
+@use '../../styles/main' as vars;
+
+.createset__content{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.createset__module{
+  width: 100%;
+  margin-top: 2rem;
+  margin-right: 2rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.module__header__row{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.module__title{
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: vars.$mainBlue;
+}
+
+.module__create{
+  width: 13.2rem;
+  height: 2.7rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.6rem;
+  background: linear-gradient(94.97deg, #2199FF 16.76%, #3783FD 77.46%);
+  box-shadow: 0 2.02px 5.36px 0 rgba(0, 0, 0, 0.25);
+
+  color: vars.$mainWhite;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.module__info__column{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.module__info__input{
+  width: 100%;
+  height: 4rem;
+
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 10.6px 0 rgba(0, 0, 0, 0.25);
+
+}
+
+.module__info__row{
+  display: flex;
+  flex-flow: row wrap;
+
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.module__info__btn{
+  height: 2.8rem;
+  padding-right: 1.3rem;
+  margin-right: 1.5rem;
+
+  border-radius: 0.6rem;
+  box-shadow: 0 2.03px 5.38px 0 rgba(0, 0, 0, 0.25);
+
+  color: vars.$mainGray;
+  font-size: 0.9rem;
+
+  img{
+    margin-left: 1rem;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#btn-import{
+  width: 10.5rem;
+}
+
+#btn-aicreate{
+  width: 13.8rem;
+}
+
+
+
+
+
+
+
+
+
