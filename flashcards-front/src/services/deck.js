@@ -3,7 +3,7 @@ import {IPADR} from "./ipname";
 export const saveDeck = async (deck) => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`http://${IPADR}/decks`, {
+    const response = await fetch(`${IPADR}/decks`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export const saveDeck = async (deck) => {
 export const getUserDecks = async () => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`http://${IPADR}/decks`, {
+    const response = await fetch(`${IPADR}/decks`, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -38,7 +38,7 @@ export const getUserDecks = async () => {
 export const deleteDeck = async (id) => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`http://${IPADR}/decks/${id}`, {
+    const response = await fetch(`${IPADR}/decks/${id}`, {
         method: 'DELETE',
         headers: {
             Authorization: `Bearer ${token}`
@@ -53,7 +53,7 @@ export const deleteDeck = async (id) => {
 export const getDeckById = async (id) => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`http://${IPADR}/decks/${id}`, {
+    const response = await fetch(`${IPADR}/decks/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -69,7 +69,7 @@ export const getDeckById = async (id) => {
 export const updateDeck = async (id, deck) => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`http://${IPADR}/decks/${id}`, {
+    const response = await fetch(`${IPADR}/decks/${id}`, {
         method: 'PUT',
         headers: {
             Authorization: `Bearer ${token}`,
@@ -86,7 +86,7 @@ export const updateDeck = async (id, deck) => {
 };
 
 export const rewordCards = async (token, cards) => {
-    return fetch(`http://${IPADR}/ai/reword`, {
+    return fetch(`${IPADR}/ai/reword`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

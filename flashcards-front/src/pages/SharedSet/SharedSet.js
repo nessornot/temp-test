@@ -10,7 +10,7 @@ export default function SharedSet() {
     const [saving, setSaving] = useState(false);
 
     useEffect(() => {
-        fetch(`http://${IPADR}/shared/${id}`)
+        fetch(`${IPADR}/shared/${id}`)
             .then((res) => {
                 if (!res.ok) throw new Error("Набор не найден или не публичен");
                 return res.json();
@@ -24,7 +24,7 @@ export default function SharedSet() {
         setSaving(true);
         try {
             const token = localStorage.getItem('jwtToken');
-            const res = await fetch(`http://${IPADR}/shared/${id}/copy`, {
+            const res = await fetch(`${IPADR}/shared/${id}/copy`, {
                 method: 'POST',
                 headers: {
                     Authorization: `Bearer ${token}`,
