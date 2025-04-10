@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1843de1f-4f3f-480f-bf55-23e33a077649" name="Changes" comment="" />
+    <list default="true" id="1843de1f-4f3f-480f-bf55-23e33a077649" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards.db" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/handlers/ai.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/ai.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/public/img/create.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/public/img/create.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/components/Card/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/components/Card/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/components/Card/Card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/components/CardsSet/CardsSet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/components/CardsSet/CardsSet.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/components/CardsSet/CardsSet.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/components/CardsSet/CardsSet.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/components/SideBar/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/components/SideBar/SideBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/components/SideBar/SideBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/components/SideBar/SideBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/components/confirmModal/ConfirmModal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/components/confirmModal/ConfirmModal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/pages/CreateSet/CreateSet.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/pages/CreateSet/CreateSet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/pages/CreateSet/CreateSet.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/pages/CreateSet/CreateSet.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/pages/LearnSet/LearnSet.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/pages/LearnSet/LearnSet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/pages/LearnSet/LearnSet.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/pages/LearnSet/LearnSet.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/pages/Library/Library.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/pages/Library/Library.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/pages/Library/Library.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/pages/Library/Library.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/pages/SharedSet/SharedSet.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/pages/SharedSet/SharedSet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/pages/SharedSet/SharedSet.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/pages/SharedSet/SharedSet.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-front/src/services/ipname.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-front/src/services/ipname.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +45,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -37,6 +60,7 @@
     "DefaultGoTemplateProperty": "Go File",
     "Go Build.go build flashcards-back.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",

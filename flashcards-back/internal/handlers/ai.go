@@ -10,8 +10,6 @@ import (
 )
 
 func CardsFromText(w http.ResponseWriter, r *http.Request) {
-	//userID := r.Context().Value(middleware.UserKey) // auth защита, если нужно
-
 	var req struct {
 		Text string `json:"text"`
 	}
@@ -28,9 +26,17 @@ func CardsFromText(w http.ResponseWriter, r *http.Request) {
 	}
 	_ = client.Auth()
 
-	prompt := `Проанализируй текст, и создай на его основе флеш-карточки. 
-			Формат: массив объектов JSON вида [{"question": "...", "answer": "..."}, ...]
-			Без пояснений. Без предисловий. Только массив в чистом JSON.`
+	//prompt := `Проанализируй текст, и создай на его основе флеш-карточки.
+	//		Формат: массив объектов JSON вида [{"question": "...", "answer": "..."}, ...]
+	//		Без пояснений. Без предисловий. Только массив в чистом JSON.`
+
+	prompt := "Проанализируй текст и создай на его основе флеш-карточки.\n\n" +
+		"Формат вывода:\n" +
+		"[\n  {\"question\": \"...\", \"answer\": \"...\"},\n  ...\n]\n\n" +
+		"Важно:\n" +
+		"- Верни только JSON-массив.\n" +
+		"- Не используй ```json или любые блоки с ```, markdown, пояснения и текст.\n" +
+		"- Только ЧИСТЫЙ JSON, чтобы программа могла его распарсить."
 
 	reqGiga := &gigachat.ChatRequest{
 		Model: gigachat.GIGACHAT_2_LITE,
@@ -57,6 +63,10 @@ func CardsFromText(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "invalid response from model", http.StatusBadGateway)
 		return
 	}
+
+	fmt.Println("- - - -\n\n", raw)
+	fmt.Println("\n\n- - - -\n\n")
+	fmt.Println(parsed, "\n\n- - - -")
 
 	err = json.NewEncoder(w).Encode(parsed)
 	if err != nil {
