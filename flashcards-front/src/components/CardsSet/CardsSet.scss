@@ -15,6 +15,11 @@
   margin-top: 1.5rem;
 }
 
+.cardsset:hover{
+  transition: background-color 0.1s ease;
+  background-color: rgba(0,0,0,0.02);
+}
+
 .cardsset__icon{
   width: 2.8rem;
   height: 2.8rem;
@@ -41,6 +46,16 @@
   }
 }
 
+.cardsset__title__wrapper{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.cardsset__btn{
+  margin-left: 0.5rem;
+}
+
 .cardsset__row{
   display: flex;
   flex-flow: row nowrap;
@@ -52,3 +67,37 @@
     margin-right: 1.5rem;
   }
 }
+
+.cardsset__btn{
+  //border: 1px black solid;
+  border-radius: 0.8rem;
+}
+
+.cardsset__btn:hover{
+  background-color: #ccc;
+}
+
+#delete-btn{
+  margin-bottom: 0.1rem;
+}
+
+#delete-btn:hover{
+  transition: background-color 0.15s ease;
+  background-color: rgba(255,0,0,0.1);
+}
+
+#link-btn{
+  width: 20px;
+  height: 20px;
+}
+
+#link-btn:hover{
+  transition: background-color 0.15s ease;
+  background-color: rgba(0,0,255,0.2);
+}
+
+#edit-btn:hover{
+  transition: background-color 0.15s ease;
+  background-color: rgba(0,0,255,0.1);
+}
+

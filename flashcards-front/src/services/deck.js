@@ -1,9 +1,8 @@
-import {IPADR} from "./ipname";
 
 export const saveDeck = async (deck) => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`${IPADR}/decks`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/decks`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -22,7 +21,7 @@ export const saveDeck = async (deck) => {
 export const getUserDecks = async () => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`${IPADR}/decks`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/decks`, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -38,7 +37,7 @@ export const getUserDecks = async () => {
 export const deleteDeck = async (id) => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`${IPADR}/decks/${id}`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/decks/${id}`, {
         method: 'DELETE',
         headers: {
             Authorization: `Bearer ${token}`
@@ -53,7 +52,7 @@ export const deleteDeck = async (id) => {
 export const getDeckById = async (id) => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`${IPADR}/decks/${id}`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/decks/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -69,7 +68,7 @@ export const getDeckById = async (id) => {
 export const updateDeck = async (id, deck) => {
     const token = localStorage.getItem('jwtToken');
 
-    const response = await fetch(`${IPADR}/decks/${id}`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/decks/${id}`, {
         method: 'PUT',
         headers: {
             Authorization: `Bearer ${token}`,
@@ -86,7 +85,7 @@ export const updateDeck = async (id, deck) => {
 };
 
 export const rewordCards = async (token, cards) => {
-    return fetch(`${IPADR}/ai/reword`, {
+    return fetch(`${process.env.REACT_APP_URL}/ai/reword`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

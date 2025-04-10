@@ -35,7 +35,13 @@
 }
 
 .sidebar__item:hover{
+  transition: background-color, 0.15s ease;
   background-color: #EEF0FF;
+}
+
+#sidebar__exit:hover{
+  transition: background-color, 0.15s ease;
+  background-color: rgba(255,0,0,0.15);
 }
 
 .sidebar__link{

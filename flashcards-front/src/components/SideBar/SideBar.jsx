@@ -27,7 +27,7 @@ export default function SideBar() {
                             Создать набор
                         </a>
                     </li>
-                    <li className="sidebar__item" onClick={handleLogout}>
+                    <li id="sidebar__exit" className="sidebar__item" onClick={handleLogout}>
                         <img src="/img/exit.svg" alt=""/>
                         <a id="li__exit" href="" className="sidebar__link">
                             Выйти из аккаунта

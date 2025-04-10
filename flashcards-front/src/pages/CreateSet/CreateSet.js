@@ -129,7 +129,6 @@ export default function CreateSet() {
         }
     };
 
-
     return (
       <div className="createset">
           <Header />
@@ -141,23 +140,13 @@ export default function CreateSet() {
                           Создать новый набор
                       </div>
                       <button className="module__create" type="submit">
-                          Создать и практиковать
-                      </button>
-                      <label style={{marginTop: '10px', display: 'block'}}>
-                          <input
-                              type="checkbox"
-                              checked={isPublic}
-                              onChange={(e) => setIsPublic(e.target.checked)}
-                          />
-                          Сделать набор публичным
-                      </label>
-                      <button onClick={handleReword} disabled={isRewording}>
-                          {isRewording ? "Переформулируем..." : "Переформулировать вопросы"}
+                          Сохранить
                       </button>
                   </div>
                   <div className="module__info__column">
                       <input
                           type="text"
+                          maxLength={25}
                           placeholder="Введите название..."
                           value={title}
                           onChange={(e) => setTitle(e.target.value)}
@@ -165,26 +154,39 @@ export default function CreateSet() {
                           className="module__info__input"
                       />
 
-                      {/*<input type="text" placeholder="Введите описание..."*/}
-                      {/*       className="module__info__input"/>*/}
-
                       <div className="module__info__row">
                           {/*<button id="btn-import" className="module__info__btn">*/}
                           {/*    <img src="/img/import.svg" alt=""/>*/}
                           {/*    Импортировать*/}
                           {/*</button>*/}
                           <button id="btn-aicreate" className="module__info__btn"
-                              onClick={() => setShowPopUp(true)}>
+                                  onClick={() => setShowPopUp(true)}>
                               <img src="/img/aicreate.svg" alt=""/>
                               Создать из конспектов
                           </button>
+                          <button id="btn-reword" className="module__info__btn" onClick={handleReword}
+                                  disabled={isRewording}>
+                              <img src="/img/aicreate.svg" alt=""/>
+                              {isRewording ? "Переформулируем..." : "Переформулировать вопросы"}
+                          </button>
+                          <label className="module__info__checkbox">
+                              <input
+                                  type="checkbox"
+                                  checked={isPublic}
+                                  onChange={(e) => setIsPublic(e.target.checked)}
+                              />
+                              Сделать набор публичным
+                          </label>
                       </div>
                   </div>
                   {showPopUp && (
-                      <div className="popup-overlay">
-                          <div className="popup-window">
-                              <h3>Вставьте текст конспекта</h3>
+                      <div className="popup__overlay">
+                          <div className="popup__window">
+                              <div className="popup__title">
+                                  Вставьте текст конспекта
+                              </div>
                               <textarea
+                                  className="popup__textarea"
                                   maxLength={5000}
                                   value={aiText}
                                   onChange={(e) => setAiText(e.target.value)}
@@ -192,11 +194,11 @@ export default function CreateSet() {
                                   rows={10}
                                   style={{width: '100%'}}
                               />
-                              <div style={{marginTop: 10}}>
-                                  <button onClick={handleAI} disabled={loading}>
-                                      {loading ? "Генерация..." : "Создать карточки на основе конспекта"}
+                              <div className="popup__row">
+                                  <button id="popup__create" className="popup__btn" onClick={handleAI} disabled={loading}>
+                                      {loading ? "Генерация..." : "Создать на основе конспекта"}
                                   </button>
-                                  <button onClick={() => setShowPopUp(false)} style={{marginLeft: 10}}>
+                                  <button id="popup__cancel" className="popup__btn" onClick={() => setShowPopUp(false)}>
                                       Отмена
                                   </button>
                               </div>
@@ -213,9 +215,11 @@ export default function CreateSet() {
                           onRemove={removeCard}
                       />
                   ))}
-                  <button onClick={addCard}>
-                      добавить карточку
-                  </button>
+                  <div className="createset__wrapper">
+                      <button className="createset__addcard" onClick={addCard}>
+                          ДОБАВИТЬ КАРТОЧКУ
+                      </button>
+                  </div>
               </form>
           </div>
       </div>

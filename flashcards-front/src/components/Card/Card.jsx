@@ -17,6 +17,7 @@ export default function Card({ index, question, answer, onChange, onRemove }) {
             <div className="card__content">
                 <div className="card__input__wrapper">
                     <input
+                        maxLength={250}
                         type="text"
                         className="card__question"
                         placeholder="_"
@@ -28,6 +29,7 @@ export default function Card({ index, question, answer, onChange, onRemove }) {
                 </div>
                 <div className="card__input__wrapper">
                     <input
+                        maxLength={250}
                         type="text"
                         className="card__answer"
                         placeholder="_"

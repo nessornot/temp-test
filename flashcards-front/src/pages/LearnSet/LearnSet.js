@@ -68,8 +68,18 @@ export default function LearnSet() {
                             </button>
                         </div>
                         {/*сама карточка, по нажатию значение ответа*/}
-                        <div className="learnset__card" onClick={handleCardClick}>
-                            {currentCard && (showAnswer ? currentCard.answer : currentCard.question)}
+                        {/*<div className="learnset__card" onClick={handleCardClick}>*/}
+                        {/*    {currentCard && (showAnswer ? currentCard.answer : currentCard.question)}*/}
+                        {/*</div>*/}
+                        <div className={`learnset__card ${showAnswer ? "flipped" : ""}`} onClick={handleCardClick}>
+                            <div className="learnset__card-inner">
+                                <div className="learnset__card-front">
+                                    {currentCard?.question}
+                                </div>
+                                <div className="learnset__card-back">
+                                    {currentCard?.answer}
+                                </div>
+                            </div>
                         </div>
                         <div className="learnset__nav">
                             {/*переход на предыдущую карточку*/}
@@ -81,7 +91,8 @@ export default function LearnSet() {
                                 {cards.length > 0 ? `${currentIndex + 1}/${cards.length}` : '0/0'}
                             </div>
                             {/*переход на следующую карточку*/}
-                            <button className="learnset__arrow" onClick={handleNext} disabled={currentIndex === cards.length - 1}>
+                            <button className="learnset__arrow" onClick={handleNext}
+                                    disabled={currentIndex === cards.length - 1}>
                                 <img src="/img/rightArrow.svg" alt=""/>
                             </button>
                         </div>

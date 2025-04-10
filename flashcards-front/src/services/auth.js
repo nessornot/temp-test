@@ -1,7 +1,6 @@
-import {IPADR} from "./ipname";
 
 export const registerUser = async (name, password) => {
-    const response = await fetch(`${IPADR}/register`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/register`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -14,7 +13,7 @@ export const registerUser = async (name, password) => {
 };
 
 export const loginUser = async (name, password) => {
-    return fetch(`${IPADR}/login`, {
+    return fetch(`${process.env.REACT_APP_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, password })
@@ -29,7 +28,7 @@ export const logout = () => {
 };
 
 export const createAI = async (token, aiText) => {
-    return fetch(`${IPADR}/ai/cards`, {
+    return fetch(`${process.env.REACT_APP_URL}/ai/cards`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -55,12 +55,14 @@ export default function Library() {
     };
 
     return(
-        <RedirectIfAuth>
         <div className="library">
             <Header />
             <div className="library__content">
                 <SideBar />
                 <div className="library__content__main">
+                    <div className="library__title">
+                        Мои наборы
+                    </div>
                     {decks.length === 0 ? (
                         <div>У вас пока нет наборов</div>
                         ) : (
@@ -86,6 +88,5 @@ export default function Library() {
                 </div>
             </div>
         </div>
-        </RedirectIfAuth>
     );
 }
